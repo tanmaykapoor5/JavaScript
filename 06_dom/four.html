@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: white;">
+
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+
+<script>
+
+    function LanguageName(langname){
+        const NewElement = document.createElement('li')
+        NewElement.innerHTML = `${langname}`
+        const parent = document.querySelector('.language');
+        parent.appendChild(NewElement)
+
+    }
+
+    LanguageName("python")
+    LanguageName("Java")
+
+    function NewLanguageName(newlangname){
+        const NewElement = document.createElement('li')
+        const addText =  NewElement.appendChild(document.createTextNode(newlangname))
+        const parent = document.querySelector('.language')
+        parent.appendChild(NewElement)
+    }
+
+    NewLanguageName('flutter')
+
+    const modify = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement('li')
+    newli.innerHTML = "hello"
+    modify.replaceWith(newli)
+    // modify.innerHTML = "Hello"
+</script>
+</html>
