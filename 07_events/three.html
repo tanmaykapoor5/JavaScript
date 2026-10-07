@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ronitpal Singh Sethi</h1>
+    <button id="Start">Start </button>
+    <button id="stop">Stop </button>
+
+</body>
+
+<script>
+
+    const button1 = document.querySelector('#Start');
+    const h = function(str) {
+        console.log(str, Date.now())
+    }
+
+    let n =0;
+    
+    button1.addEventListener('click', function() {
+         
+       n =  setInterval(h,1000,"Hii")
+
+    })
+
+    const button2 = document.querySelector('#stop')
+
+    button2.addEventListener('click', function() {
+        clearInterval(n,1000)
+    })
+
+   
+
+    
+
+    
+
+
+   
+</script>
+</html>
