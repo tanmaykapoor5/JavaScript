@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tanmay Kapoor</h1>
+    <button id="stop">Stop </button>
+</body>
+
+<script>
+    // setTimeout(function () {
+    //     console.log("Tanmay")
+
+    // }, 2000)
+
+    const changeText = function (){
+        document.querySelector('h1').innerHTML = "Tanmay"
+
+    }
+
+     const chnagename = setTimeout(changeText,2000);
+
+    const button = document.querySelector('#stop')
+    button.addEventListener('click', function () {
+        clearTimeout(chnagename);
+        console.log("STOPPED");
+
+    })
+</script>
+</html>
